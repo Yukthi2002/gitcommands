@@ -29,7 +29,9 @@ Commands:
 changes revert
 git push origin master
 git reset commit id --hard
- 
+
+git checkout <branch_name> -> to checkout from present branch and move to another branch 
+git branch <new_branch_name> -> to create new branch 
 git log -> to view the logs
 git log -2 -> to view the recents 2 logs
 git show commit id -> shows the modified file details along with the changes 
