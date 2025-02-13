@@ -1,0 +1,36 @@
+GITHUB:
+
+stages in GitHub
+1. working area -> untracked files(not tracked in GitHub) 
+2. Staging -> tracked files 
+   once we execute git add command the untracked files will be tracked by the GitHub to commit
+   git add . => to add all files
+   git add "filename" => to add specific file
+3. Local repository -> Now we can commit the files with commit message so that the files can be   
+   stored or copied in out local(git commit -m "commit message")
+4. Remote repository -> This is the stage where we push the code into GitHub to specific branch
+   It'll push the code to central repository
+   command: git push origin 
+
+Git Commands:
+git status
+git add .
+git commit -m "commit message"
+git push origin master
+ 
+git reset -> to move the repository back to the previous commit
+git revert commit id -> to remove the changes made by the previous commit
+
+Difference between Git reset and Git revert:
+In git reset the it removes all the previous commits that are done before the git reset commit
+where as in git revert it reverts the changes done in that particular commit and creates a new commit with reversed changes.
+
+Commands:
+changes revert
+git push origin master
+git reset commit id --hard
+ 
+git log -> to view the logs
+git log -2 -> to view the recents 2 logs
+git show commit id -> shows the modified file details along with the changes 
+git show --pretty="" --name-only commit id -> shows only the modified file name
