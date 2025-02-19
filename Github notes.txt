@@ -47,21 +47,32 @@ Use git diff develop to check the differences in main branch from develop branch
 
 MERGE CONFLICT:
 Merge conflict occurs when the branch you are trying to merge with does not have any differences and are modified at the same line of the file i.e., at the same part of the
-file. To resolve this we do manual merge. Merge conflict won't occue when there is some difference in the files in the branches.
+file. To resolve this we do manual merge. Merge conflict won't occur when there is some difference in the files in the branches.
 
 Difference between Branch and Tag:
 Branch is mutable(can be changed)
 Tag is immutable(cannot be changed)
 
 GIT STASH:
-git stash -> command used to save the changes temporarily that are not commited yet.
-Lets's say if you have started your development code and you need to swith to another work and wanted to save the changes temporarily and resume the work later, then you can use this command.This command will save the changes both tracked and untracked.
+git stash -> command used to save the changes temporarily that are not commited yet just like taking backup of the file.
+Lets's say if you have started your development code and you need to swith to another work and wanted to save the changes temporarily and resume the work later, then you can use this command.This command will save the changes both tracked and untracked. When we use git stash the data is stored in the form of stashes in local repository.By default it will be stored in git/refs/stash file.
 
 The data saved will be stored as stash@{index} like stash@{0}, stash@{1}....
+git stash list -> this command is used to list all the stashes present
 
-git stash apply -> this command is used to remove the work that have been saved
+git stash apply -> this command is used to apply the stash and resume work that have been saved
 git stash apply <stash_name> -> to open specific stash data
 
 git stash drop ->once you push the changes and need to delete the data saved as stash we can use this command
 git stash drop <stash_name> -> to delete the data of a specific stash
+git stash clear -> to delete all the stashes
+
+git stash pop -> this command is used to apply the latest stash and delete it from the stash list
+git stash show -> this command is used to display the summary of operations performed on stash.
+
+The main difference between stash and commit is that stash is used when ever you want to preserve data temporarily without commiting your code so that you can finish later and commit your code. Where as we use commit to store the data permanently in the repository it's just like a check point.
+
+
+
+
 
